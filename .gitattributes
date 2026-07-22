@@ -1,1 +1,7 @@
 windows-x64-static-release/grpc/lib/*.lib filter=lfs diff=lfs merge=lfs -text
+windows-x64-shared-release/libcef/Release/*.dll filter=lfs diff=lfs merge=lfs -text
+windows-x64-shared-release/libcef/Release/*.bin filter=lfs diff=lfs merge=lfs -text
+windows-x64-shared-release/libcef/Release/*.lib filter=lfs diff=lfs merge=lfs -text
+windows-x64-shared-release/libcef/lib/*.lib filter=lfs diff=lfs merge=lfs -text
+windows-x64-shared-release/libcef/Resources/* filter=lfs diff=lfs merge=lfs -text
+windows-x64-shared-release/libcef/locales/*.pak filter=lfs diff=lfs merge=lfs -text

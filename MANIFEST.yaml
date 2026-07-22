@@ -1,8 +1,8 @@
 schema_version: 1
-prebuilt_tag: "deps-2026.07.22-3"
+prebuilt_tag: "deps-2026.07.22-4"
 source_repo: "https://github.com/LeeYou/asapp-thirdparty-src"
-source_repo_commit: "debb513c83283c9dfb88419fccb588b3b5c8d251"
-created_at: "2026-07-22T00:00:00Z"
+source_repo_commit: "47602188931713a9117ddf928e5cb8b8c2a87375"
+created_at: "2026-07-23T00:00:00Z"
 defaults:
   linkage: static
   windows_min_os: win7
@@ -95,7 +95,17 @@ packages:
         linkage: static
         config: release
         path: windows-x64-static-release/boost
+  - name: libcef
+    version: "102.0.10+gf249b2e+chromium-102.0.5005.115"
+    kind: shared-runtime
+    slices:
+      - os: windows
+        arch: x64
+        linkage: shared
+        config: release
+        path: windows-x64-shared-release/libcef
+    notes: "Official CEF binary stage; sandbox lib excluded; wrapper sources included"
 notes: >
-  Phase 3.5: boost 1.90.0 header-only slice added to
-  windows-x64-static-release. Retains Phase 3.4 grpc 1.67.1 and earlier
-  openssl/libffi, nlohmann_json/stb/sqlite/gtest/spdlog packages.
+  Phase 3.6: libcef 102.0.10 shared-runtime slice added as
+  windows-x64-shared-release/libcef. Retains Phase 3.5 boost and earlier
+  packages under windows-x64-static-release.
