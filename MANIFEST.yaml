@@ -1,0 +1,35 @@
+schema_version: 1
+prebuilt_tag: "deps-bootstrap"
+source_repo: "https://github.com/LeeYou/asapp-thirdparty-src"
+source_repo_commit: ""
+created_at: "2026-07-22T00:00:00Z"
+defaults:
+  linkage: static
+  windows_min_os: win7
+  toolchain:
+    generator: ninja
+    preferred: clang-ninja
+    windows_driver: clang-cl
+    abi: msvc
+packages:
+  - name: nlohmann_json
+    version: "3.11.3"
+    kind: header-only
+    slices:
+      - os: windows
+        arch: x64
+        linkage: static
+        config: release
+        path: windows-x64-static-release/nlohmann_json
+  - name: stb
+    version: "master-pinned"
+    kind: header-only
+    slices:
+      - os: windows
+        arch: x64
+        linkage: static
+        config: release
+        path: windows-x64-static-release/stb
+notes: >
+  Bootstrap release for repository wiring and header-only pilot.
+  Compiled packages (sqlite/gtest/...) will be added in subsequent deps-* tags.
