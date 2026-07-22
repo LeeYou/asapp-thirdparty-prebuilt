@@ -1,0 +1,19 @@
+#***************************************************************************
+# Project        ___       __ _ _ __ ___  ___ 
+#               / __|____ / _` | '__/ _ \/ __|
+#              | (_|_____| (_| | | |  __/\__ \
+#               \___|     \__,_|_|  \___||___/
+#
+exec_prefix=E:/work/Demo/Demo/Demo003/asapp-thirdparty-src/dist/windows-x64-static-release/grpc/bin
+libdir=E:/work/Demo/Demo/Demo003/asapp-thirdparty-src/dist/windows-x64-static-release/grpc/lib
+includedir=E:/work/Demo/Demo/Demo003/asapp-thirdparty-src/dist/windows-x64-static-release/grpc/include
+
+Name: c-ares
+URL: https://c-ares.org/
+Description: asynchronous DNS lookup library
+Version: 1.19.1
+Requires: 
+Requires.private: 
+Cflags: -I${includedir} -DCARES_STATICLIB
+Libs: -L${libdir} -lcares
+Libs.private:  -lws2_32 -ladvapi32 -liphlpapi
