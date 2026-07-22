@@ -1,7 +1,7 @@
 schema_version: 1
-prebuilt_tag: "deps-2026.07.22"
+prebuilt_tag: "deps-2026.07.22-1"
 source_repo: "https://github.com/LeeYou/asapp-thirdparty-src"
-source_repo_commit: "d1abf51758172fcb857ef57285ad0e40dd5e2326"
+source_repo_commit: "e65304b75b43c4d8d51a66a89992176529309fb6"
 created_at: "2026-07-22T00:00:00Z"
 defaults:
   linkage: static
@@ -57,6 +57,26 @@ packages:
         linkage: static
         config: release
         path: windows-x64-static-release/spdlog
+  - name: openssl
+    version: "3.5.6"
+    kind: compiled
+    slices:
+      - os: windows
+        arch: x64
+        linkage: static
+        config: release
+        path: windows-x64-static-release/openssl
+    toolchain_exception: "perl+VsDevCmd+nmake (OpenSSL official Windows path)"
+  - name: libffi
+    version: "3.4.6"
+    kind: compiled
+    slices:
+      - os: windows
+        arch: x64
+        linkage: static
+        config: release
+        path: windows-x64-static-release/libffi
 notes: >
-  Phase 3.2: sqlite gtest spdlog + header-only pilot (nlohmann_json/stb)
-  on windows-x64-static-release (clang-cl + ninja, Win7 API baseline).
+  Phase 3.3: openssl 3.5.6 + libffi 3.4.6 added to windows-x64-static-release
+  (openssl via perl/nmake exception; libffi via custom clang-ninja CMake).
+  Retains Phase 3.2 packages: nlohmann_json/stb/sqlite/gtest/spdlog.
