@@ -1,7 +1,7 @@
 schema_version: 1
-prebuilt_tag: "deps-bootstrap"
+prebuilt_tag: "deps-2026.07.22"
 source_repo: "https://github.com/LeeYou/asapp-thirdparty-src"
-source_repo_commit: ""
+source_repo_commit: "d1abf51758172fcb857ef57285ad0e40dd5e2326"
 created_at: "2026-07-22T00:00:00Z"
 defaults:
   linkage: static
@@ -30,6 +30,33 @@ packages:
         linkage: static
         config: release
         path: windows-x64-static-release/stb
+  - name: sqlite
+    version: "3.53.3"
+    kind: compiled
+    slices:
+      - os: windows
+        arch: x64
+        linkage: static
+        config: release
+        path: windows-x64-static-release/sqlite
+  - name: gtest
+    version: "1.15.2"
+    kind: compiled
+    slices:
+      - os: windows
+        arch: x64
+        linkage: static
+        config: release
+        path: windows-x64-static-release/gtest
+  - name: spdlog
+    version: "1.14.1"
+    kind: header-only
+    slices:
+      - os: windows
+        arch: x64
+        linkage: static
+        config: release
+        path: windows-x64-static-release/spdlog
 notes: >
-  Bootstrap release for repository wiring and header-only pilot.
-  Compiled packages (sqlite/gtest/...) will be added in subsequent deps-* tags.
+  Phase 3.2: sqlite gtest spdlog + header-only pilot (nlohmann_json/stb)
+  on windows-x64-static-release (clang-cl + ninja, Win7 API baseline).
