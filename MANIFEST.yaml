@@ -1,7 +1,7 @@
-﻿schema_version: 1
-prebuilt_tag: "deps-2026.07.22-2"
+schema_version: 1
+prebuilt_tag: "deps-2026.07.22-3"
 source_repo: "https://github.com/LeeYou/asapp-thirdparty-src"
-source_repo_commit: "e65304b75b43c4d8d51a66a89992176529309fb6"
+source_repo_commit: "debb513c83283c9dfb88419fccb588b3b5c8d251"
 created_at: "2026-07-22T00:00:00Z"
 defaults:
   linkage: static
@@ -86,7 +86,16 @@ packages:
         config: release
         path: windows-x64-static-release/grpc
     notes: "Bundled protobuf + protoc / grpc_cpp_plugin tools"
+  - name: boost
+    version: "1.90.0"
+    kind: header-only
+    slices:
+      - os: windows
+        arch: x64
+        linkage: static
+        config: release
+        path: windows-x64-static-release/boost
 notes: >
-  Phase 3.4: grpc 1.67.1 (bundled protobuf + codegen tools) added to
-  windows-x64-static-release. Retains Phase 3.3 packages:
-  openssl/libffi and Phase 3.2 nlohmann_json/stb/sqlite/gtest/spdlog.
+  Phase 3.5: boost 1.90.0 header-only slice added to
+  windows-x64-static-release. Retains Phase 3.4 grpc 1.67.1 and earlier
+  openssl/libffi, nlohmann_json/stb/sqlite/gtest/spdlog packages.
