@@ -1,0 +1,11 @@
+﻿name: openssl
+version: "3.5.6"
+kind: compiled
+license: Apache-2.0
+windows_min_os: win7
+toolchain:
+  generator: nmake
+  preferred: clang-ninja
+  exception: "perl+VsDevCmd+nmake (OpenSSL official Windows path)"
+  windows_driver: msvc
+  abi: msvc

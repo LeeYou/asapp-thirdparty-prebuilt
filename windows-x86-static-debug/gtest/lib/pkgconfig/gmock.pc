@@ -1,0 +1,10 @@
+libdir=E:/work/Demo/Demo/Demo003/asapp-thirdparty-src/dist/windows-x86-static-debug/gtest/lib
+includedir=E:/work/Demo/Demo/Demo003/asapp-thirdparty-src/dist/windows-x86-static-debug/gtest/include
+
+Name: gmock
+Description: GoogleMock (without main() function)
+Version: 1.15.2
+URL: https://github.com/google/googletest
+Requires: gtest = 1.15.2
+Libs: -L${libdir} -lgmock 
+Cflags: -I${includedir} -DGTEST_HAS_PTHREAD=0

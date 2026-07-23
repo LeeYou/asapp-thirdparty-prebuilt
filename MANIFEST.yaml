@@ -1,7 +1,7 @@
-schema_version: 1
-prebuilt_tag: "deps-2026.07.22-4"
+﻿schema_version: 1
+prebuilt_tag: "deps-2026.07.23-5"
 source_repo: "https://github.com/LeeYou/asapp-thirdparty-src"
-source_repo_commit: "47602188931713a9117ddf928e5cb8b8c2a87375"
+source_repo_commit: "db6955a140d67aa9feaf816e0c73b8d9b19d7fcf"
 created_at: "2026-07-23T00:00:00Z"
 defaults:
   linkage: static
@@ -12,80 +12,6 @@ defaults:
     windows_driver: clang-cl
     abi: msvc
 packages:
-  - name: nlohmann_json
-    version: "3.11.3"
-    kind: header-only
-    slices:
-      - os: windows
-        arch: x64
-        linkage: static
-        config: release
-        path: windows-x64-static-release/nlohmann_json
-  - name: stb
-    version: "master-pinned"
-    kind: header-only
-    slices:
-      - os: windows
-        arch: x64
-        linkage: static
-        config: release
-        path: windows-x64-static-release/stb
-  - name: sqlite
-    version: "3.53.3"
-    kind: compiled
-    slices:
-      - os: windows
-        arch: x64
-        linkage: static
-        config: release
-        path: windows-x64-static-release/sqlite
-  - name: gtest
-    version: "1.15.2"
-    kind: compiled
-    slices:
-      - os: windows
-        arch: x64
-        linkage: static
-        config: release
-        path: windows-x64-static-release/gtest
-  - name: spdlog
-    version: "1.14.1"
-    kind: header-only
-    slices:
-      - os: windows
-        arch: x64
-        linkage: static
-        config: release
-        path: windows-x64-static-release/spdlog
-  - name: openssl
-    version: "3.5.6"
-    kind: compiled
-    slices:
-      - os: windows
-        arch: x64
-        linkage: static
-        config: release
-        path: windows-x64-static-release/openssl
-    toolchain_exception: "perl+VsDevCmd+nmake (OpenSSL official Windows path)"
-  - name: libffi
-    version: "3.4.6"
-    kind: compiled
-    slices:
-      - os: windows
-        arch: x64
-        linkage: static
-        config: release
-        path: windows-x64-static-release/libffi
-  - name: grpc
-    version: "1.67.1"
-    kind: compiled
-    slices:
-      - os: windows
-        arch: x64
-        linkage: static
-        config: release
-        path: windows-x64-static-release/grpc
-    notes: "Bundled protobuf + protoc / grpc_cpp_plugin tools"
   - name: boost
     version: "1.90.0"
     kind: header-only
@@ -95,6 +21,74 @@ packages:
         linkage: static
         config: release
         path: windows-x64-static-release/boost
+      - os: windows
+        arch: x86
+        linkage: shared
+        config: debug
+        path: windows-x86-shared-debug/boost
+      - os: windows
+        arch: x86
+        linkage: shared
+        config: release
+        path: windows-x86-shared-release/boost
+      - os: windows
+        arch: x86
+        linkage: static
+        config: debug
+        path: windows-x86-static-debug/boost
+      - os: windows
+        arch: x86
+        linkage: static
+        config: release
+        path: windows-x86-static-release/boost
+  - name: grpc
+    version: "1.67.1"
+    kind: compiled
+    slices:
+      - os: windows
+        arch: x64
+        linkage: static
+        config: release
+        path: windows-x64-static-release/grpc
+      - os: windows
+        arch: x86
+        linkage: static
+        config: debug
+        path: windows-x86-static-debug/grpc
+      - os: windows
+        arch: x86
+        linkage: static
+        config: release
+        path: windows-x86-static-release/grpc
+  - name: gtest
+    version: "1.15.2"
+    kind: compiled
+    slices:
+      - os: windows
+        arch: x64
+        linkage: static
+        config: release
+        path: windows-x64-static-release/gtest
+      - os: windows
+        arch: x86
+        linkage: shared
+        config: debug
+        path: windows-x86-shared-debug/gtest
+      - os: windows
+        arch: x86
+        linkage: shared
+        config: release
+        path: windows-x86-shared-release/gtest
+      - os: windows
+        arch: x86
+        linkage: static
+        config: debug
+        path: windows-x86-static-debug/gtest
+      - os: windows
+        arch: x86
+        linkage: static
+        config: release
+        path: windows-x86-static-release/gtest
   - name: libcef
     version: "102.0.10+gf249b2e+chromium-102.0.5005.115"
     kind: shared-runtime
@@ -104,8 +98,183 @@ packages:
         linkage: shared
         config: release
         path: windows-x64-shared-release/libcef
-    notes: "Official CEF binary stage; sandbox lib excluded; wrapper sources included"
-notes: >
-  Phase 3.6: libcef 102.0.10 shared-runtime slice added as
-  windows-x64-shared-release/libcef. Retains Phase 3.5 boost and earlier
-  packages under windows-x64-static-release.
+      - os: windows
+        arch: x86
+        linkage: shared
+        config: release
+        path: windows-x86-shared-release/libcef
+  - name: libffi
+    version: "3.4.6"
+    kind: compiled
+    slices:
+      - os: windows
+        arch: x64
+        linkage: static
+        config: release
+        path: windows-x64-static-release/libffi
+      - os: windows
+        arch: x86
+        linkage: shared
+        config: debug
+        path: windows-x86-shared-debug/libffi
+      - os: windows
+        arch: x86
+        linkage: shared
+        config: release
+        path: windows-x86-shared-release/libffi
+      - os: windows
+        arch: x86
+        linkage: static
+        config: debug
+        path: windows-x86-static-debug/libffi
+      - os: windows
+        arch: x86
+        linkage: static
+        config: release
+        path: windows-x86-static-release/libffi
+  - name: nlohmann_json
+    version: "3.11.3"
+    kind: header-only
+    slices:
+      - os: windows
+        arch: x64
+        linkage: static
+        config: release
+        path: windows-x64-static-release/nlohmann_json
+      - os: windows
+        arch: x86
+        linkage: shared
+        config: debug
+        path: windows-x86-shared-debug/nlohmann_json
+      - os: windows
+        arch: x86
+        linkage: shared
+        config: release
+        path: windows-x86-shared-release/nlohmann_json
+      - os: windows
+        arch: x86
+        linkage: static
+        config: debug
+        path: windows-x86-static-debug/nlohmann_json
+      - os: windows
+        arch: x86
+        linkage: static
+        config: release
+        path: windows-x86-static-release/nlohmann_json
+  - name: openssl
+    version: "3.5.6"
+    kind: compiled
+    slices:
+      - os: windows
+        arch: x64
+        linkage: static
+        config: release
+        path: windows-x64-static-release/openssl
+      - os: windows
+        arch: x86
+        linkage: shared
+        config: debug
+        path: windows-x86-shared-debug/openssl
+      - os: windows
+        arch: x86
+        linkage: shared
+        config: release
+        path: windows-x86-shared-release/openssl
+      - os: windows
+        arch: x86
+        linkage: static
+        config: debug
+        path: windows-x86-static-debug/openssl
+      - os: windows
+        arch: x86
+        linkage: static
+        config: release
+        path: windows-x86-static-release/openssl
+  - name: spdlog
+    version: "1.14.1"
+    kind: header-only
+    slices:
+      - os: windows
+        arch: x64
+        linkage: static
+        config: release
+        path: windows-x64-static-release/spdlog
+      - os: windows
+        arch: x86
+        linkage: shared
+        config: debug
+        path: windows-x86-shared-debug/spdlog
+      - os: windows
+        arch: x86
+        linkage: shared
+        config: release
+        path: windows-x86-shared-release/spdlog
+      - os: windows
+        arch: x86
+        linkage: static
+        config: debug
+        path: windows-x86-static-debug/spdlog
+      - os: windows
+        arch: x86
+        linkage: static
+        config: release
+        path: windows-x86-static-release/spdlog
+  - name: sqlite
+    version: "3.53.3"
+    kind: compiled
+    slices:
+      - os: windows
+        arch: x64
+        linkage: static
+        config: release
+        path: windows-x64-static-release/sqlite
+      - os: windows
+        arch: x86
+        linkage: shared
+        config: debug
+        path: windows-x86-shared-debug/sqlite
+      - os: windows
+        arch: x86
+        linkage: shared
+        config: release
+        path: windows-x86-shared-release/sqlite
+      - os: windows
+        arch: x86
+        linkage: static
+        config: debug
+        path: windows-x86-static-debug/sqlite
+      - os: windows
+        arch: x86
+        linkage: static
+        config: release
+        path: windows-x86-static-release/sqlite
+  - name: stb
+    version: "master-pinned"
+    kind: header-only
+    slices:
+      - os: windows
+        arch: x64
+        linkage: static
+        config: release
+        path: windows-x64-static-release/stb
+      - os: windows
+        arch: x86
+        linkage: shared
+        config: debug
+        path: windows-x86-shared-debug/stb
+      - os: windows
+        arch: x86
+        linkage: shared
+        config: release
+        path: windows-x86-shared-release/stb
+      - os: windows
+        arch: x86
+        linkage: static
+        config: debug
+        path: windows-x86-static-debug/stb
+      - os: windows
+        arch: x86
+        linkage: static
+        config: release
+        path: windows-x86-static-release/stb
+

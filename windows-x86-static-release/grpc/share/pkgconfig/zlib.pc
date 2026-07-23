@@ -1,0 +1,13 @@
+prefix=E:/work/Demo/Demo/Demo003/asapp-thirdparty-src/dist/windows-x86-static-release/grpc
+exec_prefix=E:/work/Demo/Demo/Demo003/asapp-thirdparty-src/dist/windows-x86-static-release/grpc
+libdir=E:/work/Demo/Demo/Demo003/asapp-thirdparty-src/dist/windows-x86-static-release/grpc/lib
+sharedlibdir=E:/work/Demo/Demo/Demo003/asapp-thirdparty-src/dist/windows-x86-static-release/grpc/lib
+includedir=E:/work/Demo/Demo/Demo003/asapp-thirdparty-src/dist/windows-x86-static-release/grpc/include
+
+Name: zlib
+Description: zlib compression library
+Version: 1.3
+
+Requires:
+Libs: -L${libdir} -L${sharedlibdir} -lz
+Cflags: -I${includedir}
