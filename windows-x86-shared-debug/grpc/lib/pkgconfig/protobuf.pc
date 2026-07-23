@@ -1,0 +1,12 @@
+prefix=E:/work/Demo/Demo/Demo003/asapp-thirdparty-src/dist/windows-x86-shared-debug/grpc
+exec_prefix=E:/work/Demo/Demo/Demo003/asapp-thirdparty-src/dist/windows-x86-shared-debug/grpc
+libdir=E:/work/Demo/Demo/Demo003/asapp-thirdparty-src/dist/windows-x86-shared-debug/grpc/lib
+includedir=E:/work/Demo/Demo/Demo003/asapp-thirdparty-src/dist/windows-x86-shared-debug/grpc/include
+
+Name: Protocol Buffers
+Description: Google's Data Interchange Format
+Version: 27.2.0
+Requires: abseil_dll utf8_range
+Libs: -L${libdir} -lprotobuf 
+Cflags: -I${includedir} -DPROTOBUF_USE_DLLS
+Conflicts: protobuf-lite

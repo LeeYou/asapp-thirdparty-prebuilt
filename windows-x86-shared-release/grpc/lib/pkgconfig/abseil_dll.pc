@@ -1,0 +1,11 @@
+prefix=E:/work/Demo/Demo/Demo003/asapp-thirdparty-src/dist/windows-x86-shared-release/grpc
+exec_prefix=${prefix}
+libdir=E:/work/Demo/Demo/Demo003/asapp-thirdparty-src/dist/windows-x86-shared-release/grpc/lib
+includedir=E:/work/Demo/Demo/Demo003/asapp-thirdparty-src/dist/windows-x86-shared-release/grpc/include
+
+Name: abseil_dll
+Description: Abseil DLL library
+URL: https://abseil.io/
+Version: 20240116
+Libs: -L${libdir} -labseil_dll 
+Cflags: -I${includedir}

@@ -1,5 +1,5 @@
 ﻿schema_version: 1
-prebuilt_tag: "deps-2026.07.23-5"
+prebuilt_tag: "deps-2026.07.23-7"
 source_repo: "https://github.com/LeeYou/asapp-thirdparty-src"
 source_repo_commit: "db6955a140d67aa9feaf816e0c73b8d9b19d7fcf"
 created_at: "2026-07-23T00:00:00Z"
@@ -16,11 +16,6 @@ packages:
     version: "1.90.0"
     kind: header-only
     slices:
-      - os: windows
-        arch: x64
-        linkage: static
-        config: release
-        path: windows-x64-static-release/boost
       - os: windows
         arch: x86
         linkage: shared
@@ -46,10 +41,15 @@ packages:
     kind: compiled
     slices:
       - os: windows
-        arch: x64
-        linkage: static
+        arch: x86
+        linkage: shared
+        config: debug
+        path: windows-x86-shared-debug/grpc
+      - os: windows
+        arch: x86
+        linkage: shared
         config: release
-        path: windows-x64-static-release/grpc
+        path: windows-x86-shared-release/grpc
       - os: windows
         arch: x86
         linkage: static
@@ -64,11 +64,6 @@ packages:
     version: "1.15.2"
     kind: compiled
     slices:
-      - os: windows
-        arch: x64
-        linkage: static
-        config: release
-        path: windows-x64-static-release/gtest
       - os: windows
         arch: x86
         linkage: shared
@@ -94,11 +89,6 @@ packages:
     kind: shared-runtime
     slices:
       - os: windows
-        arch: x64
-        linkage: shared
-        config: release
-        path: windows-x64-shared-release/libcef
-      - os: windows
         arch: x86
         linkage: shared
         config: release
@@ -107,11 +97,6 @@ packages:
     version: "3.4.6"
     kind: compiled
     slices:
-      - os: windows
-        arch: x64
-        linkage: static
-        config: release
-        path: windows-x64-static-release/libffi
       - os: windows
         arch: x86
         linkage: shared
@@ -137,11 +122,6 @@ packages:
     kind: header-only
     slices:
       - os: windows
-        arch: x64
-        linkage: static
-        config: release
-        path: windows-x64-static-release/nlohmann_json
-      - os: windows
         arch: x86
         linkage: shared
         config: debug
@@ -165,11 +145,6 @@ packages:
     version: "3.5.6"
     kind: compiled
     slices:
-      - os: windows
-        arch: x64
-        linkage: static
-        config: release
-        path: windows-x64-static-release/openssl
       - os: windows
         arch: x86
         linkage: shared
@@ -195,11 +170,6 @@ packages:
     kind: header-only
     slices:
       - os: windows
-        arch: x64
-        linkage: static
-        config: release
-        path: windows-x64-static-release/spdlog
-      - os: windows
         arch: x86
         linkage: shared
         config: debug
@@ -223,11 +193,6 @@ packages:
     version: "3.53.3"
     kind: compiled
     slices:
-      - os: windows
-        arch: x64
-        linkage: static
-        config: release
-        path: windows-x64-static-release/sqlite
       - os: windows
         arch: x86
         linkage: shared
@@ -253,11 +218,6 @@ packages:
     kind: header-only
     slices:
       - os: windows
-        arch: x64
-        linkage: static
-        config: release
-        path: windows-x64-static-release/stb
-      - os: windows
         arch: x86
         linkage: shared
         config: debug
@@ -277,4 +237,3 @@ packages:
         linkage: static
         config: release
         path: windows-x86-static-release/stb
-

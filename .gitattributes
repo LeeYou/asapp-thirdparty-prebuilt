@@ -1,5 +1,6 @@
-# gRPC static libs（各 arch/config）
+# gRPC static libs + shared runtime DLLs
 **/grpc/lib/*.lib filter=lfs diff=lfs merge=lfs -text
+**/grpc/bin/*.dll filter=lfs diff=lfs merge=lfs -text
 
 # libcef shared runtime（各 arch）
 **/libcef/Release/*.dll filter=lfs diff=lfs merge=lfs -text
