@@ -1,8 +1,0 @@
-name: nlohmann_json
-version: "3.11.3"
-kind: header-only
-license: MIT
-windows_min_os: win7
-toolchain:
-  generator: ninja
-  preferred: clang-ninja

@@ -1,8 +1,0 @@
-﻿name: stb
-version: "master-pinned"
-kind: header-only
-license: Public Domain / MIT-like
-windows_min_os: win7
-toolchain:
-  generator: ninja
-  preferred: clang-ninja

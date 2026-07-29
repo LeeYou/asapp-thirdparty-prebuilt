@@ -1,8 +1,0 @@
-﻿name: spdlog
-version: "1.14.1"
-kind: header-only
-license: MIT
-windows_min_os: win7
-toolchain:
-  generator: ninja
-  preferred: clang-ninja

@@ -1,9 +1,0 @@
-﻿name: boost
-version: "1.90.0"
-kind: header-only
-license: BSL-1.0
-windows_min_os: win7
-notes: "Full boost/ header tree for Asio + Beast (no b2 libs)"
-toolchain:
-  generator: ninja
-  preferred: clang-ninja

@@ -1,5 +1,0 @@
-include("${CMAKE_CURRENT_LIST_DIR}/libffiTargets.cmake")
-if(TARGET AsApp::ffi AND NOT TARGET AsApp::libffi)
-  add_library(AsApp::libffi INTERFACE IMPORTED)
-  set_target_properties(AsApp::libffi PROPERTIES INTERFACE_LINK_LIBRARIES AsApp::ffi)
-endif()
