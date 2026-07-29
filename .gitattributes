@@ -1,6 +1,17 @@
-# gRPC static libs + shared runtime DLLs
-**/grpc/lib/*.lib filter=lfs diff=lfs merge=lfs -text
-**/grpc/bin/*.dll filter=lfs diff=lfs merge=lfs -text
+# Binary / library artifacts — must use LFS (GitHub rejects blobs >= 100MB)
+*.a filter=lfs diff=lfs merge=lfs -text
+*.lib filter=lfs diff=lfs merge=lfs -text
+*.so filter=lfs diff=lfs merge=lfs -text
+*.so.* filter=lfs diff=lfs merge=lfs -text
+*.dll filter=lfs diff=lfs merge=lfs -text
+*.dylib filter=lfs diff=lfs merge=lfs -text
+*.exe filter=lfs diff=lfs merge=lfs -text
+
+# gRPC / OpenSSL tool binaries（无扩展名）
+**/grpc/bin/protoc filter=lfs diff=lfs merge=lfs -text
+**/grpc/bin/protoc-* filter=lfs diff=lfs merge=lfs -text
+**/grpc/bin/grpc_* filter=lfs diff=lfs merge=lfs -text
+**/openssl/bin/openssl filter=lfs diff=lfs merge=lfs -text
 
 # libcef shared runtime（各 arch）
 **/libcef/Release/*.dll filter=lfs diff=lfs merge=lfs -text

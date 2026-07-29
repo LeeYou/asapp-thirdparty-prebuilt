@@ -1,0 +1,13 @@
+prefix=/work/src/dist/linux-x64-static-release/grpc
+exec_prefix=/work/src/dist/linux-x64-static-release/grpc
+libdir=/work/src/dist/linux-x64-static-release/grpc/lib
+sharedlibdir=/work/src/dist/linux-x64-static-release/grpc/lib
+includedir=/work/src/dist/linux-x64-static-release/grpc/include
+
+Name: zlib
+Description: zlib compression library
+Version: 1.3
+
+Requires:
+Libs: -L${libdir} -L${sharedlibdir} -lz
+Cflags: -I${includedir}

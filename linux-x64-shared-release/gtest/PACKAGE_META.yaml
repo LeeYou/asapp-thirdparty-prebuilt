@@ -1,0 +1,10 @@
+name: gtest
+version: "1.15.2"
+kind: compiled
+license: BSD-3-Clause
+windows_min_os: win7
+toolchain:
+  generator: ninja
+  preferred: clang-ninja
+  windows_driver: clang-cl
+  abi: msvc

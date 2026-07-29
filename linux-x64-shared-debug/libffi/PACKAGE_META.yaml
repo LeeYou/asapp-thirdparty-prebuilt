@@ -1,0 +1,13 @@
+name: libffi
+version: "3.4.6"
+kind: compiled
+license: MIT
+os: linux
+arch: x64
+linkage: shared
+config: debug
+toolchain:
+  generator: autotools
+  preferred: clang
+  notes: "Upstream configure/make on POSIX (Windows uses cmake/packages/libffi.cmake)"
+  abi: system

@@ -1,0 +1,13 @@
+name: openssl
+version: "3.5.6"
+kind: compiled
+license: Apache-2.0
+os: linux
+arch: x64
+linkage: static
+config: release
+toolchain:
+  generator: make
+  preferred: clang
+  exception: "perl Configure + make (OpenSSL official Unix path)"
+  abi: system

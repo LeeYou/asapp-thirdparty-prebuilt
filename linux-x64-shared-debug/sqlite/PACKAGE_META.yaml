@@ -1,0 +1,10 @@
+name: sqlite
+version: "3.53.3"
+kind: compiled
+license: Public Domain
+windows_min_os: win7
+toolchain:
+  generator: ninja
+  preferred: clang-ninja
+  windows_driver: clang-cl
+  abi: msvc

@@ -1,0 +1,12 @@
+prefix=/work/src/dist/linux-x64-shared-debug/grpc
+exec_prefix=${prefix}
+libdir=/work/src/dist/linux-x64-shared-debug/grpc/lib
+includedir=/work/src/dist/linux-x64-shared-debug/grpc/include
+
+Name: absl_bad_any_cast
+Description: Abseil bad_any_cast library
+URL: https://abseil.io/
+Version: 20240116
+Requires: absl_bad_any_cast_impl = 20240116, absl_config = 20240116
+Libs: -L${libdir}  
+Cflags: -I${includedir} -Wno-float-conversion -Wno-implicit-float-conversion -Wno-implicit-int-float-conversion -Wno-unknown-warning-option -DNOMINMAX
