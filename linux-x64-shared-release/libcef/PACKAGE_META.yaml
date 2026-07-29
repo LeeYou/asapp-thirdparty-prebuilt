@@ -1,0 +1,26 @@
+name: libcef
+version: "102.0.10+gf249b2e+chromium-102.0.5005.115"
+kind: shared-runtime
+license: BSD-like
+linux_min_glibc: "2.28"
+notes: "Official CEF binary stage (no rebuild). chrome-sandbox excluded by default. Wrapper sources under libcef_dll/. Runtime SOs live in Release/ (CEF upstream layout)."
+linkage: shared
+toolchain:
+  generator: n/a-official-binary
+  preferred: official-cef-binary
+runtime_files:
+  - Release/*.so
+  - Release/*.so.*
+  - Release/*.bin
+  - Release/*.json
+plugin_dirs:
+  - locales
+  - Resources
+paths:
+  include: include
+  lib: lib
+  bin: Release
+  resources: Resources
+  locales: locales
+  sdk_cmake: cmake
+  sdk_wrapper: libcef_dll
