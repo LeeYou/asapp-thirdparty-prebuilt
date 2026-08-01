@@ -1,1 +1,1 @@
-../Release/libcef.so
+INPUT(../Release/libcef.so)

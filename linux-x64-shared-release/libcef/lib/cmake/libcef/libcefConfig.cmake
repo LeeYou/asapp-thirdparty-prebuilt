@@ -8,8 +8,9 @@ if(WIN32)
     IMPORTED_LOCATION "${_LIBCEF_PREFIX}/lib/libcef.lib"
     INTERFACE_INCLUDE_DIRECTORIES "${_LIBCEF_PREFIX}/include")
 else()
+  # 真实 ELF 在 Release/；勿用 lib/libcef.so（symlink 经 Windows 同步常落成坏文本）
   set_target_properties(AsApp::libcef PROPERTIES
-    IMPORTED_LOCATION "${_LIBCEF_PREFIX}/lib/libcef.so"
+    IMPORTED_LOCATION "${_LIBCEF_PREFIX}/Release/libcef.so"
     INTERFACE_INCLUDE_DIRECTORIES "${_LIBCEF_PREFIX}/include")
 endif()
 set(AsApp_libcef_PREFIX "${_LIBCEF_PREFIX}" CACHE PATH "AsApp libcef package root")
