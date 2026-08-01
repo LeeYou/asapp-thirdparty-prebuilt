@@ -20,3 +20,6 @@
 **/libcef/lib/*.lib filter=lfs diff=lfs merge=lfs -text
 **/libcef/Resources/* filter=lfs diff=lfs merge=lfs -text
 **/libcef/locales/*.pak filter=lfs diff=lfs merge=lfs -text
+
+# libcef lib/libcef.so is a GNU ld INPUT script (text), not an ELF binary
+**/libcef/lib/libcef.so -filter -diff -merge text eol=lf

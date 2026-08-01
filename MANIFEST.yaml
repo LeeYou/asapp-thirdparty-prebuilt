@@ -1,8 +1,8 @@
 ﻿schema_version: 1
-prebuilt_tag: "deps-2026.07.23-7"
+prebuilt_tag: "deps-2026.08.01-1"
 source_repo: "https://github.com/LeeYou/asapp-thirdparty-src"
 source_repo_commit: "db6955a140d67aa9feaf816e0c73b8d9b19d7fcf"
-created_at: "2026-07-23T00:00:00Z"
+created_at: "2026-08-01T00:00:00Z"
 defaults:
   linkage: static
   windows_min_os: win7
