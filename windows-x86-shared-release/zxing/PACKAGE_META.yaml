@@ -1,0 +1,16 @@
+name: zxing
+version: "2.3.0"
+kind: compiled
+license: Apache-2.0
+windows_min_os: win7
+upstream: zxing-cpp/zxing-cpp
+cxx_standard: "17"
+features:
+  readers: true
+  writers: old
+  c_api: false
+toolchain:
+  generator: ninja
+  preferred: clang-ninja
+  windows_driver: clang-cl
+  abi: msvc
