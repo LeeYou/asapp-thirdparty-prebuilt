@@ -1,8 +1,8 @@
-﻿schema_version: 1
-prebuilt_tag: "deps-2026.08.01-1"
+schema_version: 1
+prebuilt_tag: "deps-2026.08.06-2"
 source_repo: "https://github.com/LeeYou/asapp-thirdparty-src"
-source_repo_commit: "db6955a140d67aa9feaf816e0c73b8d9b19d7fcf"
-created_at: "2026-08-01T00:00:00Z"
+source_repo_commit: "cb70f334076cb02984cd7e55e899e5857d283ad8"
+created_at: "2026-08-06T00:00:00Z"
 defaults:
   linkage: static
   windows_min_os: win7
@@ -237,3 +237,17 @@ packages:
         linkage: static
         config: release
         path: windows-x86-static-release/stb
+  - name: zxing
+    version: "2.3.0"
+    kind: compiled
+    slices:
+      - os: linux
+        arch: x64
+        linkage: shared
+        config: release
+        path: linux-x64-shared-release/zxing
+      - os: windows
+        arch: x86
+        linkage: shared
+        config: release
+        path: windows-x86-shared-release/zxing
