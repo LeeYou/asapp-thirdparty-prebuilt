@@ -1,5 +1,5 @@
 schema_version: 1
-prebuilt_tag: "deps-2026.08.06-2"
+prebuilt_tag: "deps-2026.08.17-1"
 source_repo: "https://github.com/LeeYou/asapp-thirdparty-src"
 source_repo_commit: "cb70f334076cb02984cd7e55e899e5857d283ad8"
 created_at: "2026-08-06T00:00:00Z"
@@ -251,3 +251,20 @@ packages:
         linkage: shared
         config: release
         path: windows-x86-shared-release/zxing
+
+  - name: opencv
+    version: "4.5.5"
+    kind: compiled
+    slices:
+      - os: windows
+        arch: x86
+        linkage: shared
+        config: release
+        path: windows-x86-shared-release/opencv
+        notes: "library_linkage=static inside shared-release ship slice"
+      - os: linux
+        arch: x64
+        linkage: shared
+        config: release
+        path: linux-x64-shared-release/opencv
+        notes: "library_linkage=static inside shared-release ship slice"

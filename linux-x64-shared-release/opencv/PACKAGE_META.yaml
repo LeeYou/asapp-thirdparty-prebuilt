@@ -1,0 +1,25 @@
+name: opencv
+version: "4.5.5"
+kind: compiled
+license: Apache-2.0
+windows_min_os: win7
+upstream: opencv/opencv
+cxx_standard: "17"
+ship_slice: shared-release
+library_linkage: static
+slice: linux-x64-shared-release
+notes: "OpenCV is always built STATIC; install only into *-shared-release. Consume via private AsApp image facade; do not ship opencv DLLs/SOs or re-export cv::*. find_package via CMAKE_PREFIX_PATH=<slice>/opencv (lib/cmake/opencv4)."
+features:
+  modules: "core,imgproc,imgcodecs"
+  library_linkage: static
+  cuda: false
+  opencl: false
+  ipp: false
+  jpeg: bundled
+  png: bundled
+install_layout: "include/ + lib/ (+ lib/cmake/opencv4 on Windows)"
+toolchain:
+  generator: ninja
+  preferred: clang-ninja
+  windows_driver: clang-cl
+  abi: msvc
